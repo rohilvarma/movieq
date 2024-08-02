@@ -1,9 +1,9 @@
-import {cn} from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+import Navbar from "@/components/Navbar";
+import { inter } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "MovieQ",
@@ -17,7 +17,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn("min-h-screen bg-background font-inter dark antialiased", inter.variable)}>{children}</body>
+      <body
+        className={cn(
+          "min-h-screen bg-background font-inter dark antialiased",
+          inter.variable
+        )}
+      >
+        <Navbar />
+        {children}
+      </body>
     </html>
   );
 }

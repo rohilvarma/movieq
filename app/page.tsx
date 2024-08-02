@@ -1,9 +1,9 @@
+import WatchStack from "@/components/WatchStack";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      
-      MovieQ init.
-
+    <main className="max-w-lg mx-auto w-[90%]">
+      <WatchStack />
     </main>
   );
 }
